@@ -33,3 +33,5 @@ Run `make cron` to install a couple of crons (see makefile).
 One to start the backups against B2 and another one to clean local
 files (they take a lot of space). Update the `cron-backup` and `cron-clean`
 targets to trigger the cron jobs at your desired times.
+
+Open a ticket if you have questions. PRs always welcome.
