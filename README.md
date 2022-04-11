@@ -25,8 +25,9 @@ Usage:
 Make sure you read the `Makefile`. Create the different files and change the variables
 as necessary.
 
-Then, start by creating the bucket in BB with `make init` then run
-the backup and snapshots targets a few time to make sure the backup is working properly.
+Then, start by creating the bucket in BB and run `make init` to innitialize the
+restic backup. Then run the backup and snapshots targets a few times to make
+sure the backup is working properly.
 
 Run `make cron` to install a couple of crons (see makefile).
 One to start the backups against B2 and another one to clean local
