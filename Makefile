@@ -1,13 +1,21 @@
+# Change this with your bucket name
+B2_BUCKET=drio-reolink
+# Change this to point to your bucket id
+B2_ID=003106374dd93dd0000000002
+# Make sure to have the bucket key in this file
+B2_KEY=$(shell cat ./b2-key.txt)
+# Change the directory name within the bucket
+B2_URL=b2:$(B2_BUCKET):b2_drio_repo
+# Make sure you the pass.txt file with your b2 bucket password
 PASS_FILE="--password-file=./pass.txt"
+
+B2_VARS=B2_ACCOUNT_ID=$(B2_ID) B2_ACCOUNT_KEY=$(B2_KEY)
 EXCLUDE=--exclude-file=exclude.txt
 INCLUDE=--files-from=include.txt
-B2_BUCKET=drio-reolink
-B2_ID=003106374dd93dd0000000002
-B2_KEY=$(shell cat ./b2-key.txt)
-B2_VARS=B2_ACCOUNT_ID=$(B2_ID) B2_ACCOUNT_KEY=$(B2_KEY)
-B2_URL=b2:$(B2_BUCKET):b2_drio_repo
 
+# Keep the backups for 3 months
 KEEP_WITHIN=--keep-within 3m # 3 months
+# Remove files in local disk after 7 days
 DAYS="7"
 
 ## help: print this help message
