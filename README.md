@@ -1,7 +1,8 @@
 ### What is this?
 
-This project contains a Makefile to backup video data from ip cameras. 
-It uses [backblaze's b2](https://www.backblaze.com/b2/cloud-storage.html).
+This project contains a Makefile to backup video data from security cameras. There is
+really nothing specific to security cameras so you can use it to backup anything.
+It uses [backblaze's b2](https://www.backblaze.com/b2/cloud-storage.html) as a backend storage.
 Make sure your camera dumps activity into the same machine where you are going to 
 run the makefile.
 
