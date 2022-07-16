@@ -1,6 +1,5 @@
 # Change this with your bucket name
 B2_BUCKET=drio-reolink
-# Change this to point to your bucket id
 B2_ID=003106374dd93dd0000000002
 # Make sure to have the bucket key in this file
 B2_KEY=$(shell cat ./b2-key.txt)
@@ -13,8 +12,8 @@ B2_VARS=B2_ACCOUNT_ID=$(B2_ID) B2_ACCOUNT_KEY=$(B2_KEY)
 EXCLUDE=--exclude-file=exclude.txt
 INCLUDE=--files-from=include.txt
 
-# Keep the backups for 3 months
-KEEP_WITHIN=--keep-within 3m # 3 months
+# Keep the backups for 1 months
+KEEP_WITHIN=--keep-within 1m # 1 months
 # Remove files in local disk after 7 days
 DAYS="7"
 
@@ -42,7 +41,7 @@ snapshots:
 ## forget: remove old snapshots
 .PHONY: forget
 forget:
-	@$(B2_VARS) restic --verbose -r $(B2_URL) forget --prune $(PASS_FILE) $(KEEP_WITHIN)
+	@$(B2_VARS) restic --verbose -r $(B2_URL) $(PASS_FILE) forget --prune $(KEEP_WITHIN)
 
 ## cron: install cron jobs
 .PHONY: cron

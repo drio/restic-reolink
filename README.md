@@ -1,5 +1,7 @@
 ### What is this?
 
+![](https://restic.readthedocs.io/en/latest/_static/logo.png)
+
 This project contains a Makefile to backup video data from security cameras. There is
 really nothing specific to security cameras so you can use it to backup anything.
 It uses [backblaze's b2](https://www.backblaze.com/b2/cloud-storage.html) as a backend storage.
