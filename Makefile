@@ -1,9 +1,4 @@
-B2_BUCKET?=
-B2_ID?=
-B2_KEY?=
-BUCKET_DIR_NAME?=
-# Keep the backups for n months
-KEEP?=1m
+include ./env
 
 PASS_FILE="--password-file=./pass.txt"
 B2_URL=b2:$(B2_BUCKET):$(BUCKET_DIR_NAME)
