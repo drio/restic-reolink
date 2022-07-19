@@ -24,16 +24,5 @@ Usage:
 
 ### Install
 
-Make sure you read the `Makefile`. Create the different files and change the variables
-as necessary.
+Use this [ansible playbook](https://github.com/drio/restic-reolink-ansible).
 
-Then, start by creating the bucket in BB and run `make init` to innitialize the
-restic backup. Then run the backup and snapshots targets a few times to make
-sure the backup is working properly.
-
-Run `make cron` to install a couple of crons (see makefile).
-One to start the backups against B2 and another one to clean local
-files (they take a lot of space). Update the `cron-backup` and `cron-clean`
-targets to trigger the cron jobs at your desired times.
-
-Open a ticket if you have questions. PRs always welcome.
