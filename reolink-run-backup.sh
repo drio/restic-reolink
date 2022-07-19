@@ -1,5 +1,7 @@
 #!/bin/bash
 set -e
 
-cd /home/pi/restic-reolink
+dir=`dirname $0`
+
+cd $dir
 make backup forget
