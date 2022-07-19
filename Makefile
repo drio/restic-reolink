@@ -1,4 +1,4 @@
-include ./.env
+include .env
 
 PASS_FILE="--password-file=./pass.txt"
 B2_URL=b2:$(B2_BUCKET):$(BUCKET_DIR_NAME)
