@@ -1,7 +1,5 @@
 #!/bin/bash
 set -e
 
-dir=`dirname $0`
-
-cd $dir
+cd $HOME/restic-reolink
 make backup forget
