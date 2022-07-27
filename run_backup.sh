@@ -4,6 +4,9 @@ set -e
 source .env
 k=reolink
 PASS_FILE="--password-file=./pass.txt"
+EXCLUDE="--exclude-file=exclude.txt"
+INCLUDE="--files-from=include.txt"
+
 
 # .env
 #B2_BUCKET={{ b2_bucket }}
