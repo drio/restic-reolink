@@ -1,7 +1,7 @@
 include .env
 
 PASS_FILE="--password-file=./pass.txt"
-B2_URL=b2:$(B2_BUCKET):$(BUCKET_DIR_NAME)
+B2_URL=b2:$(B2_BUCKET)
 B2_VARS=B2_ACCOUNT_ID=$(B2_ID) B2_ACCOUNT_KEY=$(B2_KEY)
 EXCLUDE=--exclude-file=exclude.txt
 INCLUDE=--files-from=include.txt
