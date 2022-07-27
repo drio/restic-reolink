@@ -16,5 +16,5 @@ export B2_ACCOUNT_KEY=$B2_KEY
 restic -r $B2_BUCKET:$BUCKET_DIR_NAME backup $INCLUDE $PASS_FILE $EXCLUDE > ${k}.log
 
 ./metrics.sh ./${k}.log type="\"drio-${k}\"" > metrics.$k
-scp ./metrics.$k $NODE_EXPORTER_SSH:$NODE_EXPORTER_DIR/metrics.drio.${k}.prom
+mv ./metrics.$k $NODE_EXPORTER_DIR/metrics.drio.${k}.prom
 rm -f metrics.$k ${k}.log
