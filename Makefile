@@ -17,10 +17,8 @@ help:
 init:
 	$(B2_VARS) restic -r $(B2_URL) init $(PASS_FILE)
 
-## backup: create a snapshot
-.PHONY: backup
 backup:
-	@$(B2_VARS) restic -r $(B2_URL) backup $(INCLUDE) $(PASS_FILE) $(EXCLUDE)
+	@./run_backup.sh
 
 ## snapshots: list snapshots
 .PHONY: snapshots
