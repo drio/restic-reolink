@@ -1,4 +1,1 @@
-/home/reolink/basement
-/home/reolink/driveway
-/home/reolink/garden
-/home/reolink/irongate
+/home/pi/cameras
