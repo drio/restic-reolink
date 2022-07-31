@@ -14,8 +14,7 @@ function usage() {
 labels=$2
 
 cut=cut
-which gcut &> /dev/null
-[ $? -eq 0 ] && cut=gcut
+[ $(uname -s) == "Darwin" ] && cut=gcut
 
 #METRICS_FILE='/var/lib/node-exporter/restic-backup.prom'
 # list of labels attached to all series, comma separated, without trailing comma
